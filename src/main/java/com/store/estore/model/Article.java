@@ -26,4 +26,5 @@ public class Article {
   private byte[] image;
   private Integer stock;
   private Float price;
+
 }

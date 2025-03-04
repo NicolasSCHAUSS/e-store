@@ -77,7 +77,7 @@ public class AuthController {
   @PostMapping("/register")
   public ResponseEntity<?> registerUser(@RequestBody RegisterUserDto registerUserDto) {
     if(userRepository.existsByEmail(registerUserDto.getEmail())) {
-      return ResponseEntity.badRequest()
+      return ResponseEntity.internalServerError()
         .body("Error: Email déja utilisé !");
     }
 
